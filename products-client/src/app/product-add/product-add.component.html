@@ -1,0 +1,31 @@
+<div class='container'>
+   <h1>Inhaalexamen Aanvragen</h1>
+
+   <form (ngSubmit)='onSubmit()' #productForm='ngForm'>
+
+      <div class='form-group'>
+         <label for='name'>Naam :</label>
+         <input type='text' class='form-control' id='name' required
+            [(ngModel)]='model.name' name='name'>
+      </div>
+      <br />
+      <div class='form-group'>
+         <label for='examen'>Examen :</label>
+         <input type='text' class='form-control' id='examen' required
+            [(ngModel)]='model.examen' name='examen'>
+      </div>
+      <br />
+      <div class='form-group'>
+         <label for='reden'>Reden :</label>
+         <input type='text' class='form-control' id='reden' required
+            [(ngModel)]='model.reden' name='reden'>
+      </div>
+      <br />
+      <button type='submit' class='btn btn-success' [disabled]='productForm.invalid'>Aanvragen</button>
+
+      <br/><br/>
+
+      {{ productForm.value | json }}
+
+   </form>
+</div>

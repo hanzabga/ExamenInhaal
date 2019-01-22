@@ -1,0 +1,22 @@
+<div class='container'>
+   <h1>Aavragen Tonen</h1>
+
+   <form (ngSubmit)='onSubmit()'>
+
+      <div class='form-group' [formGroup]='search'>
+         <label for='name'>Naam student :</label>&nbsp;&nbsp;
+         <input type='text' formControlName='name'>
+      </div>
+      <br />
+      <button type='submit' class='btn btn-success'>Aanvragen zoeken</button>
+
+   </form>
+   <br /><br />
+   <h2> Result</h2>
+   <label>Name :&nbsp;</label>{{ product.name }}<br />
+   <label>Examen :&nbsp;</label>{{ product.examen }}<br />
+   <label>Reden :&nbsp;</label>{{ product.reden }}<br />
+   <label>Datum :&nbsp;</label>{{product.datum | date:'M/d/yy, h:mm'}}
+
+
+</div>

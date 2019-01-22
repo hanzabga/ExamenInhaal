@@ -1,0 +1,12 @@
+<div class = 'container'>
+   <h1>Aanvragen voor</h1>
+   <ul>
+    <li *ngFor="let product of products">
+      Name : {{ product.name }}<br />
+      Examen : {{ product.examen }}<br />
+      Reden : {{ product.reden }}<br />
+      Datum : {{product.datum | date:'M/d/yy, h:mm'}}
+    </li>
+  </ul>
+
+</div>
